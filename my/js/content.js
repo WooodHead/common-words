@@ -137,7 +137,7 @@ function cmnWords($e){
                 var nv = v;
                 if(regText.test(v)==true){
                     var pos = w5000.indexOf(v.toLocaleLowerCase());
-                    var star = pos < 1000 ? 1:pos < 2500 ?2:3;
+                    
                     var title = "This word is ranked "+pos+".Click to show toolbar"
                     if(pos>-1){
                         var known = false;
@@ -148,7 +148,7 @@ function cmnWords($e){
                                 wordsInPage.push(pos)
                             }
                         }
-                        nv="<span class='cmnw_word' data-rank='"+pos+"' data-star='"+star+"' " +
+                        nv="<span class='cmnw_word cmnw_highlight' data-rank='"+pos +
                             "data-word='"+v+"' title='"+title+"' " +
                             "data-known="+known+">"+v+"</span>";
                     }
